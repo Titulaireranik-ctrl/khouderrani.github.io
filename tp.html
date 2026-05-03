@@ -1,207 +1,507 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP - Josue Mukadi Kabombo</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPs - Karim Houderrani</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.tp-detail-section{margin-bottom:1.2rem;}
+.tp-detail-section h3{font-size:0.95rem;color:#FFE81F;margin-bottom:0.5rem;border-left:3px solid #FFE81F;padding-left:0.7rem;text-shadow:0 0 8px rgba(255,232,31,0.6);}
+.tp-detail-section ul{list-style:disc;padding-left:1.5rem;color:#B0E0FF;line-height:1.8;font-size:0.95rem;}
+.tp-detail-section p{color:#B0E0FF;line-height:1.7;font-size:0.95rem;}
+.cmd-block{background:#0a0f1a;border:1px solid #00D9FF;border-left:3px solid #FFE81F;padding:0.8rem 1rem;font-family:monospace;font-size:0.85rem;color:#7ee787;margin:0.5rem 0 1rem;overflow-x:auto;white-space:pre;box-shadow:inset 0 0 10px rgba(0,217,255,0.05);}
+.tp-body{padding-top:1.2rem;border-top:1px solid rgba(0,217,255,0.2);margin-top:1rem;display:none;}
+.tp-actions{display:flex;gap:1rem;margin-top:0.8rem;flex-wrap:wrap;align-items:center;}
+.toggle-btn{background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.4);color:#00D9FF;padding:0.4rem 1.2rem;font-size:0.85rem;cursor:pointer;transition:all 0.2s;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.toggle-btn:hover{background:rgba(0,217,255,0.25);box-shadow:0 0 15px rgba(0,217,255,0.4);}
+.dl-btn{background:linear-gradient(135deg,rgba(255,232,31,0.15),rgba(255,165,0,0.1));border:2px solid #FFE81F;color:#FFE81F;padding:0.4rem 1.2rem;font-size:0.85rem;cursor:pointer;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:inline-flex;align-items:center;gap:0.4rem;transition:all 0.2s;clip-path:polygon(8% 0%,100% 0%,92% 100%,0% 100%);}
+.dl-btn:hover{background:linear-gradient(135deg,rgba(255,232,31,0.3),rgba(255,165,0,0.2));box-shadow:0 0 20px rgba(255,232,31,0.5);transform:translateY(-2px);}
+</style>
 </head>
 <body>
 
-    <!-- Menu -->
-    <header>
-        <nav>
-            <ul class="menu-left">
-                <li><a href="index.html">Accueil</a></li>
-            </ul>
-            <ul class="menu-right">
-                <li class="has-submenu">
-                    <a href="#" class="active">Portfolio</a>
-                    <ul class="submenu">
-                        <li><a href="tp.html">TPs</a></li>
-                        <li><a href="projet.html">Projets</a></li>
-                        <li><a href="stagesio1.html">Stage SIO1</a></li>
-                        <li><a href="stagesio2.html">Stage SIO2</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Documents</a>
-                    <ul class="submenu">
-                        <li><a href="cv.html">CV</a></li>
-                        <li><a href="lettre de motivation.html">Lettre de motivation</a></li>
-                        <li><a href="conventionstagesio1.html">Convention SIO1</a></li>
-                        <li><a href="conventionstagesio2.html">Convention SIO2</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Veille</a>
-                    <ul class="submenu">
-                        <li><a href="veillesujet1.html">Thème 1</a></li>
-                        <li><a href="veillesujet2.html">Thème 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav>
+    <ul class="menu-left">
+      <li><a href="index.html">Accueil</a></li>
+    </ul>
+    <ul class="menu-right">
+      <li class="has-submenu">
+        <a href="#" class="active">Portfolio</a>
+        <ul class="submenu">
+          <li><a href="tp.html">TPs</a></li>
+          <li><a href="projet.html">Projets</a></li>
+          <li><a href="stagesio1.html">Stage SIO1</a></li>
+          <li><a href="stagesio2.html">Stage SIO2</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Documents</a>
+        <ul class="submenu">
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="lettre de motivation.html">Lettre de motivation</a></li>
+          <li><a href="conventionstagesio1.html">Convention SIO1</a></li>
+          <li><a href="conventionstagesio2.html">Convention SIO2</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Veille</a>
+        <ul class="submenu">
+          <li><a href="veillesujet1.html">Thème 1</a></li>
+          <li><a href="veillesujet2.html">Thème 2</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Contenu principal -->
-    <main class="content-page">
-        <div class="container">
-            <h1 class="page-title">Mes Travaux Pratiques</h1>
-            <p class="page-subtitle">Découvrez l'ensemble de mes travaux pratiques réalisés dans le cadre de ma formation BTS SIO</p>
+<main class="content-page">
+  <div class="container">
+    <h1 class="page-title">Mes Travaux Pratiques</h1>
+    <p class="page-subtitle">Ensemble des TPs réalisés durant ma formation BTS SIO — Administration système Linux, virtualisation, réseau et services web</p>
 
-            <!-- TP 1 -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP 1 - Création de Site Web avec HTML5 et CSS3</h2>
-                    <span class="tp-badge">WEB</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Septembre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Créer un site web complet avec HTML5 et CSS3</p>
-                    <p><strong>📚 Formation :</strong> OpenClassRooms</p>
-                    <div class="skills">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Design Responsive</span>
-                    </div>
-                    <p style="margin-top: 1rem;"><strong>Description :</strong> Formation complète sur la création de sites web modernes avec HTML5 et CSS3, suivie sur la plateforme OpenClassRooms.</p>
-                </div>
-            </div>
-
-            <!-- TP 2 -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP 2 - Configuration et Montage PC</h2>
-                    <span class="tp-badge">HARDWARE</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Octobre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Conception de configurations PC optimisées</p>
-                    <div class="skills">
-                        <span class="skill-tag">Hardware</span>
-                        <span class="skill-tag">BIOS</span>
-                        <span class="skill-tag">Windows 11</span>
-                        <span class="skill-tag">Pilotes</span>
-                    </div>
-                    <p style="margin-top: 1rem;"><strong>Compétences acquises :</strong></p>
-                    <ul>
-                        <li>Configuration PC pour virtualisation, gaming, serveur</li>
-                        <li>Montage et assemblage de PC</li>
-                        <li>Installation de Windows 11</li>
-                        <li>Configuration BIOS et mise à jour pilotes</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- TP 3 -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP 3 - Installation VM Tiny10 avec VirtualBox</h2>
-                    <span class="tp-badge">VIRTUALISATION</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Octobre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Maîtriser l'installation de machines virtuelles</p>
-                    <div class="skills">
-                        <span class="skill-tag">VirtualBox</span>
-                        <span class="skill-tag">Virtualisation</span>
-                        <span class="skill-tag">Tiny10</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TP 4 -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP 4 - Maîtrise de la ligne de commande Windows (CMD)</h2>
-                    <span class="tp-badge">SYSTÈME</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Novembre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Exploration et maîtrise de l'invite de commandes</p>
-                    <div class="skills">
-                        <span class="skill-tag">CMD</span>
-                        <span class="skill-tag">Batch</span>
-                        <span class="skill-tag">Automatisation</span>
-                        <span class="skill-tag">Scripts</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TP 5 -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP 5 - CMD & PowerShell : Administration Système</h2>
-                    <span class="tp-badge">ADMIN</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Novembre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Organisation et manipulation de fichiers</p>
-                    <div class="skills">
-                        <span class="skill-tag">CMD</span>
-                        <span class="skill-tag">PowerShell</span>
-                        <span class="skill-tag">Administration</span>
-                        <span class="skill-tag">Réseau</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TP SQL -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>TP SQL - Gestion de Base de Données</h2>
-                    <span class="tp-badge">DATABASE</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> Décembre 2024</p>
-                    <p><strong>🎯 Objectif :</strong> Maîtriser les commandes SQL essentielles</p>
-                    <div class="skills">
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">SQLite</span>
-                        <span class="skill-tag">SELECT</span>
-                        <span class="skill-tag">INSERT</span>
-                        <span class="skill-tag">UPDATE</span>
-                        <span class="skill-tag">DELETE</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cisco -->
-            <div class="tp-card">
-                <div class="tp-header">
-                    <h2>Formation Cisco NetAcad - Sécurité des Terminaux</h2>
-                    <span class="tp-badge">SÉCURITÉ</span>
-                </div>
-                <div class="tp-content">
-                    <p><strong>📅 Date :</strong> En cours</p>
-                    <p><strong>🎯 Objectif :</strong> Certification Cisco en sécurité informatique</p>
-                    <div class="skills">
-                        <span class="skill-tag">Cisco</span>
-                        <span class="skill-tag">Cybersécurité</span>
-                        <span class="skill-tag">Réseau</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Résumé -->
-            <div class="summary-card">
-                <h2>Compétences Développées</h2>
-                <div class="skills-summary">
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Configuration PC</span>
-                    <span class="skill-tag">Virtualisation</span>
-                    <span class="skill-tag">Ligne de commande</span>
-                    <span class="skill-tag">Scripts Batch</span>
-                    <span class="skill-tag">PowerShell</span>
-                    <span class="skill-tag">Diagnostic réseau</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Cybersécurité</span>
-                </div>
-            </div>
+    <!-- TP 1 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 1 — Installation de VirtualBox et découverte de Linux</h2>
+        <span class="tp-badge">VIRTUALISATION</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Septembre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Installer VirtualBox, découvrir Linux et préparer la machine virtuelle Xubuntu</p>
+        <div class="skills">
+          <span class="skill-tag">VirtualBox</span><span class="skill-tag">Linux</span><span class="skill-tag">Xubuntu</span><span class="skill-tag">Virtualisation</span><span class="skill-tag">ISO</span>
         </div>
-    </main>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/installation-et-configuration-xbuntu-avec-vb-etape-1.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Contexte</h3>
+            <p>Linux est un système d'exploitation open source créé par Linus Torvalds en 1991, distribué sous licence GPL. Nous avons utilisé la distribution <strong>Xubuntu 25.10</strong>, légère et adaptée à une utilisation en machine virtuelle, sans modifier le système Windows hôte.</p>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Travail réalisé</h3>
+            <ul>
+              <li>Téléchargement et installation de VirtualBox sur Windows</li>
+              <li>Création d'une machine virtuelle avec les ressources adaptées</li>
+              <li>Montage de l'image ISO Xubuntu 25.10 dans le lecteur virtuel</li>
+              <li>Recherche comparative : VirtualBox, Hyper-V, VMware (éditeur, fonctionnalités, usages)</li>
+              <li>Étude des modes réseau : NAT, Accès par pont, Réseau interne, Host-only</li>
+            </ul>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Compétences acquises</h3>
+            <ul>
+              <li>Comprendre le principe de la virtualisation</li>
+              <li>Différencier les types de virtualisation et leurs usages</li>
+              <li>Configurer une machine virtuelle dans VirtualBox</li>
+              <li>Connaître les distributions Linux et leurs particularités</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- TP 1 suite -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 1 (suite) — Configuration avancée de la machine virtuelle</h2>
+        <span class="tp-badge">VIRTUALISATION</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Septembre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Explorer les options de configuration réseau et démarrer l'installation</p>
+        <div class="skills">
+          <span class="skill-tag">VirtualBox</span><span class="skill-tag">NAT</span><span class="skill-tag">Réseau</span><span class="skill-tag">ISO</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/installation-et-configuration-xbuntu-avec-vb-etape-1-suite.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Travail réalisé</h3>
+            <ul>
+              <li>Exploration des options de configuration de la machine virtuelle</li>
+              <li>Découverte des modes de carte réseau (NAT, Pont, Réseau interne, Host-only)</li>
+              <li>Insertion du fichier ISO Xubuntu 25.10 dans le lecteur DVD virtuel</li>
+              <li>Démarrage de la machine virtuelle sur le DVD</li>
+            </ul>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Modes réseau étudiés</h3>
+            <ul>
+              <li><strong>NAT</strong> — accès Internet via la machine hôte, isolé du réseau local</li>
+              <li><strong>Pont (Bridged)</strong> — la VM est visible sur le réseau local comme une vraie machine</li>
+              <li><strong>Réseau interne</strong> — communication uniquement entre VMs</li>
+              <li><strong>Host-only</strong> — communication entre la VM et l'hôte uniquement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 2 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 2 — Installation de Xubuntu et partitionnement du disque</h2>
+        <span class="tp-badge">SYSTÈME</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Octobre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Installer Xubuntu avec un partitionnement manuel</p>
+        <div class="skills">
+          <span class="skill-tag">Partitionnement</span><span class="skill-tag">Linux</span><span class="skill-tag">ext4</span><span class="skill-tag">swap</span><span class="skill-tag">Système de fichiers</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/installation-et-configuration-xbuntu-avec-vb-etape-2.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Structure des partitions créées</h3>
+            <ul>
+              <li><strong>/boot</strong> — 500 Mo, ext4 : fichiers de démarrage (GRUB)</li>
+              <li><strong>swap</strong> — 1500 Mo : espace d'échange (extension de la RAM)</li>
+              <li><strong>/</strong> — partition racine : système d'exploitation</li>
+              <li><strong>/home</strong> — données et fichiers personnels des utilisateurs</li>
+            </ul>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Travail réalisé</h3>
+            <ul>
+              <li>Sélection de la langue française et du clavier "French"</li>
+              <li>Désactivation des mises à jour pendant l'installation</li>
+              <li>Création manuelle de la table de partitions</li>
+              <li>Configuration et validation de chaque partition</li>
+              <li>Finalisation de l'installation et premier démarrage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 3 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 3 — Première connexion et environnement de travail</h2>
+        <span class="tp-badge">LINUX</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Octobre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Découvrir l'environnement de bureau Linux et maîtriser la commande sudo</p>
+        <div class="skills">
+          <span class="skill-tag">sudo</span><span class="skill-tag">GRUB</span><span class="skill-tag">Xfce</span><span class="skill-tag">LightDM</span><span class="skill-tag">Environnement de bureau</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/etape-3-premiere-connexion-et-environnement-de-travail.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Contexte</h3>
+            <p>La connexion se fait avec un compte utilisateur standard (jamais root). L'environnement <strong>Xfce</strong> est chargé via <strong>LightDM</strong>. La commande <strong>sudo</strong> permet d'exécuter des commandes administrateur ponctuellement.</p>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Commandes sudo</h3>
+            <div class="cmd-block">sudo reboot          # Redémarre le système
+sudo apt update      # Met à jour la liste des paquets</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Travail réalisé</h3>
+            <ul>
+              <li>Connexion avec le compte utilisateur créé à l'installation</li>
+              <li>Découverte de l'environnement de bureau Xfce</li>
+              <li>Modification de la résolution de l'écran virtuel</li>
+              <li>Recherche comparative : GNOME, KDE Plasma, Xfce</li>
+              <li>Compréhension du rôle de GRUB comme chargeur de noyau</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 4 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 4 — Installation des Additions Invité VirtualBox</h2>
+        <span class="tp-badge">VIRTUALISATION</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Octobre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Améliorer les performances et le confort de la VM avec les addons-invités</p>
+        <div class="skills">
+          <span class="skill-tag">VirtualBox</span><span class="skill-tag">Addons invités</span><span class="skill-tag">Dossier partagé</span><span class="skill-tag">Presse-papier</span><span class="skill-tag">vboxsf</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/etape-4-installation-et-configuration-des-addonsinvites-de-virtualbox.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Installation des addons et dossier partagé</h3>
+            <div class="cmd-block">sudo ./VBoxLinuxAdditions.run
+sudo reboot
+mkdir $HOME/partage
+sudo mount -t vboxsf share $HOME/partage</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Travail réalisé</h3>
+            <ul>
+              <li>Insertion de l'image ISO des additions via le menu Périphériques</li>
+              <li>Lancement du script d'installation VBoxLinuxAdditions</li>
+              <li>Activation du presse-papier partagé bidirectionnel</li>
+              <li>Création et montage du dossier partagé Windows ↔ Ubuntu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 5 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 5 — Gestion des utilisateurs Linux</h2>
+        <span class="tp-badge">ADMIN</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Novembre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Comprendre et gérer les utilisateurs, groupes et droits sous Linux</p>
+        <div class="skills">
+          <span class="skill-tag">sudo</span><span class="skill-tag">Utilisateurs</span><span class="skill-tag">Groupes</span><span class="skill-tag">UID/GID</span><span class="skill-tag">/etc/sudoers</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/etape-5-gestion-des-utilisateurs.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Commandes utilisées</h3>
+            <div class="cmd-block">sudo cat /etc/sudoers        # Afficher la config sudo
+cat /etc/group               # Lister les groupes
+sudo useradd nomutilisateur  # Créer un utilisateur
+sudo passwd nomutilisateur   # Définir un mot de passe
+sudo usermod -aG sudo user   # Ajouter au groupe sudo</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Fichiers système clés</h3>
+            <ul>
+              <li><strong>/etc/sudoers</strong> — définit qui peut utiliser sudo et avec quels droits</li>
+              <li><strong>/etc/passwd</strong> — liste de tous les utilisateurs du système</li>
+              <li><strong>/etc/group</strong> — liste des groupes et leurs membres</li>
+              <li><strong>/etc/shadow</strong> — mots de passe chiffrés (accès root uniquement)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 6 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 6 — Installation d'outils essentiels (VLC, Nmap, Wireshark)</h2>
+        <span class="tp-badge">RÉSEAU</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Novembre 2024</p>
+        <p><strong>🎯 Objectif :</strong> Installer et utiliser des outils réseau et multimédia via APT</p>
+        <div class="skills">
+          <span class="skill-tag">APT</span><span class="skill-tag">VLC</span><span class="skill-tag">Nmap</span><span class="skill-tag">Wireshark</span><span class="skill-tag">Sécurité réseau</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/etape-6-installation-d-application.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Installations</h3>
+            <div class="cmd-block">sudo apt update && sudo apt install vlc
+sudo apt install nmap
+nmap localhost          # Scan réseau local
+sudo apt install wireshark</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Outils installés</h3>
+            <ul>
+              <li><strong>VLC</strong> — lecteur multimédia universel</li>
+              <li><strong>Nmap</strong> — cartographie réseau, détection des ports et services ouverts</li>
+              <li><strong>Wireshark</strong> — capture et analyse du trafic réseau en temps réel (ARP, IP, TCP, DNS…)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 7 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 7 — Installation d'un serveur Web Apache avec SSH</h2>
+        <span class="tp-badge">SERVEUR WEB</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Janvier 2025</p>
+        <p><strong>🎯 Objectif :</strong> Installer et configurer un serveur Apache, gérer les services Linux</p>
+        <div class="skills">
+          <span class="skill-tag">Apache</span><span class="skill-tag">systemd</span><span class="skill-tag">SSH</span><span class="skill-tag">VirtualHost</span><span class="skill-tag">DNS local</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/etape-8-1-installation-serveur-web.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Gestion des services avec systemctl</h3>
+            <div class="cmd-block">systemctl start apache2
+systemctl stop apache2
+systemctl restart apache2
+systemctl status apache2
+systemctl list-units --type=service</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Installation SSH + Apache</h3>
+            <div class="cmd-block">sudo apt update
+sudo apt install openssh-server apache2
+systemctl status ssh
+ssh localhost</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Compétences acquises</h3>
+            <ul>
+              <li>Gérer des services Linux avec systemd/systemctl</li>
+              <li>Administrer un serveur à distance via SSH</li>
+              <li>Créer des VirtualHosts Apache pour plusieurs sites</li>
+              <li>Mettre en place une résolution DNS locale</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 8 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 8 — Serveur Web sécurisé HTTPS + PHP + MariaDB + phpMyAdmin</h2>
+        <span class="tp-badge">SÉCURITÉ</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Février 2025</p>
+        <p><strong>🎯 Objectif :</strong> Sécuriser Apache avec HTTPS/TLS et déployer une stack LAMP complète</p>
+        <div class="skills">
+          <span class="skill-tag">HTTPS</span><span class="skill-tag">TLS/SSL</span><span class="skill-tag">PHP</span><span class="skill-tag">MariaDB</span><span class="skill-tag">phpMyAdmin</span><span class="skill-tag">LAMP</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/partie-8-2-serveur-web-securise-https-php-mariadb-phpmyadmin.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>HTTP vs HTTPS</h3>
+            <ul>
+              <li><strong>Confidentialité</strong> — données chiffrées, illisibles pour un tiers</li>
+              <li><strong>Intégrité</strong> — toute modification invalide la signature numérique</li>
+              <li><strong>Authentification</strong> — le certificat SSL/TLS prouve l'identité du serveur</li>
+            </ul>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Activation SSL + certificat auto-signé</h3>
+            <div class="cmd-block">sudo a2enmod ssl
+sudo systemctl restart apache2
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout /etc/ssl/private/monsite.key \
+  -out /etc/ssl/certs/monsite.crt</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Installation PHP + MariaDB</h3>
+            <div class="cmd-block">sudo apt install php libapache2-mod-php php-mysql
+sudo apt install mariadb-server
+sudo mysql_secure_installation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TP 9 -->
+    <div class="tp-card">
+      <div class="tp-header">
+        <h2>TP 9 — Installation de Nextcloud sur Ubuntu</h2>
+        <span class="tp-badge">CLOUD</span>
+      </div>
+      <div class="tp-content">
+        <p><strong>📅 Date :</strong> Mars 2025</p>
+        <p><strong>🎯 Objectif :</strong> Déployer une solution de stockage cloud open source avec Nextcloud</p>
+        <div class="skills">
+          <span class="skill-tag">Nextcloud</span><span class="skill-tag">Apache</span><span class="skill-tag">PHP 8.1</span><span class="skill-tag">MariaDB</span><span class="skill-tag">Cloud</span><span class="skill-tag">LAMP</span>
+        </div>
+        <div class="tp-actions">
+          <button class="toggle-btn" onclick="toggle(this)">▼ Voir le détail</button>
+          <a class="dl-btn" href="docs/installation_de_nextcloud_sur_debian.docx" download>📥 Télécharger le TP</a>
+        </div>
+        <div class="tp-body">
+          <div class="tp-detail-section">
+            <h3>Contexte</h3>
+            <p>Nextcloud est une alternative open source à Google Drive, hébergée sur son propre serveur Linux. L'installation repose sur une pile LAMP complète (Linux, Apache, MariaDB, PHP).</p>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Étapes d'installation</h3>
+            <div class="cmd-block">sudo apt update -y && sudo apt upgrade -y
+sudo apt install apache2 -y
+sudo systemctl enable apache2 && sudo systemctl start apache2
+sudo apt install php8.1 php8.1-cli php8.1-xml php8.1-zip \
+  php8.1-mbstring php8.1-curl php8.1-gd php8.1-mysql -y
+sudo apt install mariadb-server -y
+sudo mysql_secure_installation</div>
+          </div>
+          <div class="tp-detail-section">
+            <h3>Compétences acquises</h3>
+            <ul>
+              <li>Déployer une application web complexe sur Linux</li>
+              <li>Configurer une pile LAMP complète étape par étape</li>
+              <li>Administrer MariaDB et créer des bases de données dédiées</li>
+              <li>Mettre en place une solution cloud self-hosted open source</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Résumé -->
+    <div class="summary-card">
+      <h2>🎯 Compétences Développées</h2>
+      <div class="skills-summary">
+        <span class="skill-tag">VirtualBox</span>
+        <span class="skill-tag">Linux / Xubuntu</span>
+        <span class="skill-tag">Partitionnement</span>
+        <span class="skill-tag">sudo / Droits</span>
+        <span class="skill-tag">Gestion utilisateurs</span>
+        <span class="skill-tag">APT</span>
+        <span class="skill-tag">Nmap</span>
+        <span class="skill-tag">Wireshark</span>
+        <span class="skill-tag">Apache</span>
+        <span class="skill-tag">systemd</span>
+        <span class="skill-tag">SSH</span>
+        <span class="skill-tag">HTTPS / TLS</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">MariaDB</span>
+        <span class="skill-tag">phpMyAdmin</span>
+        <span class="skill-tag">Nextcloud</span>
+        <span class="skill-tag">LAMP</span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+function toggle(btn) {
+  var body = btn.closest('.tp-content').querySelector('.tp-body');
+  var open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? '▼ Voir le détail' : '▲ Masquer';
+}
+</script>
 </body>
 </html>
